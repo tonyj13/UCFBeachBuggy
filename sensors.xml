@@ -1,0 +1,16 @@
+<launch>
+	<node pkg="rosserial_python" type="serial_node.py" name="LidarServo" args="/dev/ttyUSB0">
+	<!-- 
+		<node pkg="rosserial_python" type="serial_node.py" name="LidarServo">
+		<param name="port" value="/dev/ttyACM0"/>
+	-->
+		<param name="baud" value="57600"/>
+	</node>
+	<!--
+	<node pkg="rosserial_python" type="serial_node.py" name="ServoLidar">
+		<param name="port" value="/dev/ttyACM1"/>
+	-->
+	<node pkg="rosserial_python" type="serial_node.py" name="ServoLidar" args="/dev/ttyUSB1">
+		<param name="baud" value="57600"/>
+	</node>
+</launch>
